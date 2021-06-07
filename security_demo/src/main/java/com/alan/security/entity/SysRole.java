@@ -23,7 +23,7 @@ public class SysRole implements Serializable {
 
 	@Id
 	@Column(name = "id" , columnDefinition = "int(11) DEFAULT NULL COMMENT 'null'")
-	private Long id;
+	private int id;
 
    	@Column(name = "name" , columnDefinition = "varchar(255) DEFAULT NULL COMMENT 'null'")
 	private String name;
