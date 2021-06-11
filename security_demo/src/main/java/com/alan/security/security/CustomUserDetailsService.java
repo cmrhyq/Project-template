@@ -1,4 +1,4 @@
-package com.alan.security.service;
+package com.alan.security.security;
 
 import com.alan.security.entity.SysRole;
 import com.alan.security.entity.SysUser;

@@ -24,7 +24,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     name: defaultDataSource
     password: Hyq0901.
-    url: jdbc:mysql://bj.kevinkda.cn:3306/hsir_graduation_project?characterEncoding=utf-8&useSSl=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://bj.kevinkda.cn:3306/hsirweb?characterEncoding=utf-8&useSSl=false&allowPublicKeyRetrieval=true
     username: cmrhyq
   thymeleaf:
     cache: true
