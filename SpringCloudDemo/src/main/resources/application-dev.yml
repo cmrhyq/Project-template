@@ -1,0 +1,40 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+  server:
+    port: 7779
+
+
+server:
+  port: 7779
+
+
+spring:
+  application:
+    name: springcloud
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    password: Hyq0901.
+    url: jdbc:mysql://bj.kevinkda.cn:3306/hsirweb?characterEncoding=utf-8&useSSl=false&allowPublicKeyRetrieval=true
+    username: cmrhyq
+  thymeleaf:
+    cache: true
+    check-template: true
+    check-template-location: true
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    excluded-view-names: ''
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html

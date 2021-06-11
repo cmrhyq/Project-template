@@ -1,0 +1,51 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  profiles:
+    active: dev
+#    include:
+#      - es
+  application:
+    name: springcloud
+  thymeleaf:
+    cache: true
+    check-template: true
+    check-template-location: true
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    excluded-view-names: ''
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+  jpa:
+    #将默认的存储引擎切换为InnoDB
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    #再日志中打印出执行的sql语句
+    show-sql: true
+    #指明在程序启动的时候要删除并且创建的实体类的表
+    hibernate:
+      ddl-auto: update
+  mvc:
+    static-path-pattern:
+      - classpath:/static/**
+  resources:
+    static-locations:
+      - classpath:/META-INF/resoures/
+      - classpath:/resoures/
+      - classpath:/static/
+      - classpath:/public/
+logging:
+  level:
+    root: info # 日志级别
