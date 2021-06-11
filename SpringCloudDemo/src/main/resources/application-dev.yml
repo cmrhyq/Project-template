@@ -10,11 +10,11 @@ management:
       exposure:
         include: '*'
   server:
-    port: 7779
+    port: 8000
 
 
 server:
-  port: 7779
+  port: 8000
 
 
 spring:
