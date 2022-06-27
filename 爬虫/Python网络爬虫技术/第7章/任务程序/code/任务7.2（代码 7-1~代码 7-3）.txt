@@ -1,0 +1,17 @@
+# 代码 7-1
+
+scrapy startproject TipDMSpider E:/第7章/任务程序/code
+
+
+
+# 代码 7-2
+
+E:
+cd E:/第7章/任务程序/code/TipDMSpider
+scrapy genspider tipdm www.tipdm.com
+
+
+
+# 代码 7-3
+
+scrapy crawl tipdm
