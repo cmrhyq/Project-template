@@ -16,9 +16,9 @@ public class EmailService {
     private static final String HOST = "smtp.163.com";
     private static final Integer PORT = 25;
     private static final Integer ALI_PORT = 465;
-    private static final String USERNAME = "cmrhyq@163.com";
-    private static final String PASSWORD = "hyq199891";
-    private static final String EMAILFORM = "1678336204@qq.com";
+    private static final String USERNAME = "*";
+    private static final String PASSWORD = "*";
+    private static final String EMAILFORM = "*";
     private static JavaMailSenderImpl mailSender = createAliMailSender();
 
     /**
