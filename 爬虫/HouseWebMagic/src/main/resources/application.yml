@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://bj.kevinkda.cn:3306/hsir_graduation_project?rewriteBatchedStatements=true
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: cmrhyq
+    password: Hyq0901.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  redis:
+    host: redis.kevinkda.cn
+    port: 6376
+    password: Ecs_Redis_20210130
+    timeout: 30000
+    jedis:
+      pool:
+        max-idle: 100
+        max-wait: 3000
