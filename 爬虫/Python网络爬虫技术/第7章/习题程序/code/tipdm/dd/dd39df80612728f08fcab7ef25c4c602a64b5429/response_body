@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+<title>企业解决方案 - 泰迪科技-专注于大数据技术研发及知识传播</title>
+<meta http-equiv="keywords" content=""/>
+<meta http-equiv="description" content=""/>
+<!--[if lt IE 9]>
+<script src="/r/cms/html5.js" type="text/javascript"></script>
+<![endif]-->
+<script src="/r/cms/jquery.js" type="text/javascript"></script>
+<script src="/r/cms/jqueryUI/jquery-ui.js" type="text/javascript"></script>
+<script src="/r/cms/front.js" type="text/javascript"></script>
+<script src="/r/cms/tipdmcom/tipdmcom/js/common.js" type="text/javascript"></script>
+<script type="text/javascript" src="/r/cms/tipdmcom/tipdmcom/js/jquery.SuperSlide.js"></script>
+<link type="text/css" rel="stylesheet" href="/r/cms/tipdmcom/tipdmcom/css/tip_home.css" />
+<link type="text/css" rel="stylesheet" href="/r/cms/tipdmcom/tipdmcom/css/tip_art.css" />
+<link type="text/css" rel="stylesheet" href="/r/cms/tipdmcom/tipdmcom/css/iconfont.css" />
+<script type="text/javascript">
+$(function() {
+  Cms.channelViewCount("","259");
+  Cms.siteFlow("", location.href, document.referrer,"true");
+});
+</script>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="/r/cms/tipdmcom/tipdmcom/css/login.css" />
+<script>
+function qkeypress(){
+	var q=$("input[name=q]");
+	if(q.val().trim()!=""){
+		$("input[name=q]").autocomplete("enable");
+	}else{
+		$("input[name=q]").autocomplete("disable");
+	}
+}
+</script>
+<header class="header rel">
+  <div class="container clearfix"> <a class="logo" href="/"><img src="/r/cms/tipdmcom/tipdmcom/tip/logo.png" srcset="/r/cms/tipdmcom/tipdmcom/tip/logo@2x.png 2x" ></a> <nav class="nav">
+  <ul id="menu" class="menu">
+        <li class=""><a class="a1" href="/">首 页</a></li>
+    <li class=""><a 
+    href="/tipdm/zjtd/" target="">走进泰迪</a>
+    </li>
+    <li class=""><a 
+    href="/tipdm/cpfw/" target="">产品服务</a>
+    </li>
+    <li class="on"><a 
+    href="/tipdm/jjfa/" target="">解决方案</a>
+    </li>
+    <li class=""><a 
+    href="http://www.tipdm.com:80/pxrz/index.jhtml" target="">培训认证</a>
+    </li>
+    <li class=""><a 
+    href="http://cbda.tipdm.org/" target="_blank">认证考试</a>
+    </li>
+    <li class=""><a 
+    href="/tipdm/swhz/" target="">商务合作</a>
+    </li>
+    <li class=""><a 
+    href="/tipdm/tddt/" target="">泰迪动态</a>
+    </li>
+  </ul>
+</nav>
+<script>
+$("#menu li").bind("mouseover",function(){
+	$("#menu li").addClass("unOn");
+	$("#menu li").removeClass("hoverOn");
+	$(this).addClass("hoverOn");
+});
+$("#menu li").bind("mouseout",function(){
+	$("#menu li").removeClass("unOn");
+	$("#menu li").removeClass("hoverOn");
+});
+</script>
+    <div class="header-r">
+      <div id="search" class="search">
+        <input type="text" name="q" placeholder="请输入您要查找的内容" value="" maxlength="50" autocomplete="off" class="searchCon" id="searchInput" onKeyDown="searchEnter()">
+        <a id="searchBtn" class="searchMenu"><i class="iconfont icon-sousuo"></i></a> </div>
+      <script language="javascript" type="text/javascript">
+		  	
+			$("#searchBtn").click(function(){
+				sKey();
+			});
+		  
+		  	function sKey(){
+				var s = $("#search").hasClass("searchOn");
+				var t = $(".searchCon").val().trim();
+				if( t=="" && s==0 || t=="请输入您要查找的内容"){
+					searchF(0);
+					$(".searchCon").focus();
+				}else if( s==1 && t !="" ){
+					//window.open("/search.jspx?q="+t);
+					window.location.href = "/search.jspx?q="+encodeURI(t);
+				}else{
+					searchF(1);
+				}
+			}
+		  
+		  
+			$(".searchCon").focusout(function(){
+				var t = $(".searchCon").val();
+				if(t==""){
+					searchF(1);
+				}				
+			}); 
+		  
+			function searchF(s){
+				if(s==0){
+					$("#search").addClass("searchOn");
+				}
+				if(s==1){
+					$("#search").removeClass("searchOn");
+				}
+			};
+		  
+		  function searchEnter(){
+			  	var event = window.event || arguments.callee.caller.arguments[0];
+				if(event.keyCode == 13){
+					sKey();
+				}
+			};
+		  
+		</script> 
+      <div class="login undis"><a class="tc" href="/login.jspx">登录</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/register.jspx">注册</a></div>
+       </div>
+  </div>
+</header><div class="topBanner mt16">
+  <div class="home-banner container" id="topBanner">
+    <div class="bd">
+      <ul>
+     <li><a href="http://www.tipdm.com/pxdt/1564.jhtml" target="_blank" style="background-image:url('/u/cms/tipdmcom/201812/18111216n42q.jpg');"></a></li>
+
+<li><a href="http://www.tipdm.com/pxdt/1568.jhtml" target="_blank" style="background-image:url('/u/cms/tipdmcom/201812/271044055bpp.jpg');"></a></li>
+
+
+
+
+<li><a href="http://www.tipdm.cn/" target="_blank" style="background-image:url('/u/cms/tipdmcom/201702/27173850e2uh.jpg');"></a></li>
+      </ul>
+    </div>
+    <div class="hd">
+      <ul>
+      </ul>
+      <span id="bannerNum">/3</span> </div>
+    <div class="controler2"> <a href="javascript:;" class="prev"><i class="iconfont icon-zuo"></i></a> <a href="javascript:;" class="next"><i class="iconfont icon-you"></i></a> </div>
+    <script type="text/javascript" src="/r/cms/tipdmcom/tipdmcom/js/script.js"></script> 
+  </div>
+  <script>
+	  	$(function(){$("#bannerNum").text("/"+$("#topBanner .bd ul li").length);});
+		$("#topBanner").slide({mainCell:".bd ul",titCell:".hd ul",autoPlay:true,effect:"left",interTime:"5000",autoPage:"true",titOnClassName:"down"});
+	</script> 
+</div><div class="container mt16">
+  <div class="artBlock bgw clearfix">
+    <div class="artMain fr">
+      <section id="t259" class="hot">
+        <div class="titH1">
+          <h1><span>企业解决方案</span></h1>
+        </div>
+        
+        <div class="item clearfix" style="border-top:none;"> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20170205/1058.html" target="_blank">电力行业</a></h1>
+            <div class="des">随着计量自动化系统采集覆盖率不断提升、客户渠道服务的大面积推广、智能小区建设的持续推进，配用电环节的用户交互信息已经呈现大数据特征，采用大数据分析技术对这些用户交互信息进行分析，了解客户行为特点、用电偏好、客户业务偏好、渠道偏好、缴费习惯、关注领域等行为，并基于客户特点进行客户分群管理，为渠道分流、业务推荐、节能建议等差异化服务策略制定、精确主动服务提供支撑。</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2017-02-05 17:31</em></span></div>
+            <div class="data"><span class="view">449</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/992.html" target="_blank">电信行业</a></h1>
+            <div class="des">电信运营商拥有多年的数据积累，拥有诸如财务收入、业务发展量等结构化数据，也会涉及到图片、文本、音频、视频等非结构化数据。从数据来源看，电信运营商的数据来自于涉及移动语音、固定电话、固网接入和无线上网等所有业务，也会涉及公众客户、政企客户和家庭客户，同时也会收集到实体渠道、电子渠道、直销渠道等所有类型渠道的接触信息。整体来看，电信运营商大数据发展仍处在探索阶段。目前国内运营商运用大数据主要有：网络管理和优化；市场与精准营销；客户关系管理；企业运营管理。
+</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 09:45</em></span></div>
+            <div class="data"><span class="view">274</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/991.html" target="_blank">医疗卫生</a></h1>
+            <div class="des">乳腺癌证素变化规律及截断疗法模型、基于内容图像检索的脑瘤早期辅助诊断模型</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 15:44</em></span></div>
+            <div class="data"><span class="view">236</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/990.html" target="_blank">金融保险</a></h1>
+            <div class="des">客户细分分析、银行风险管理、银行信用等级评估</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 14:05</em></span></div>
+            <div class="data"><span class="view">233</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/988.html" target="_blank">生产制造</a></h1>
+            <div class="des">智能自动配方仿真、不同种类生物质废物在混合厌氧消化过程中组份的优化搭配模型、厌氧消化过程预测和预警、桩基完整性检测、石油勘探中油气层自动评价、家电用户使用习惯数据挖掘、家电设备（如空调、热水器等）用户行为分析、</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 13:59</em></span></div>
+            <div class="data"><span class="view">223</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/987.html" target="_blank">零售商贸</a></h1>
+            <div class="des">精准智能营销、展会贸易匹配、客户需求倾向分析</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 11:52</em></span></div>
+            <div class="data"><span class="view">207</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/986.html" target="_blank">农畜牧业</a></h1>
+            <div class="des">水产健康养殖专家系统、水产主导品种数据化专家系统、水色图像预测评价、水产养殖投入产出多目标优化仿真、海水增养殖区环境综合评价</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 11:47</em></span></div>
+            <div class="data"><span class="view">225</span><span class="comment">0</span></div>
+          </div>
+        </div>
+        <div class="item clearfix" style=""> 
+          <div class="text">
+            <h1><a href="/tipdm/qyjjfa/20161206/985.html" target="_blank">政府部门</a></h1>
+            <div class="des">纳税评估、律师信用评估、个人信用评估、企业信用评级、公安经济犯罪侦查</div>
+            <div class="fl"><span class="ch">企业解决方案<em>2016-12-06 11:44</em></span></div>
+            <div class="data"><span class="view">277</span><span class="comment">0</span></div>
+          </div>
+        </div>
+       <div class="fpage"> <div>
+	<a class="currPageClass" href="#" onclick="location.href=('index.html');">1</a>&nbsp;
+<script type="text/javascript">
+	function goPage(){
+		var page=$("#pageNo").val();
+		if(page!=""){
+			location.href=('index_'+page+'.html');
+		}
+	}
+	$(function() {
+		$("#pageNo").bind("keydown",function(e){
+	        // 兼容FF和IE和Opera    
+			var theEvent = e || window.event;    
+			var code = theEvent.keyCode || theEvent.which || theEvent.charCode;  
+			if (code == 13) {  
+			  //回车
+				goPage();
+		    }    
+		});
+	});
+</script>
+<input id="pageNo" size="2"/><input type="button" value="go" onclick="goPage()" />
+</div></div>
+         </section>
+    </div>
+    <div class="artSide fl">
+<div id="subMenu" class="subMenu">
+  <div class="titH1"><h1><a>解决方案</a></h1></div>
+  <div class="bd">
+    <ul class="subList">
+      <li class=""><a href="/tipdm/gxjjfa/" >高校解决方案</a></li>
+      <li class="on"><a href="/tipdm/qyjjfa/" >企业解决方案</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+$(function(){
+	if($("#subMenu2 .bd ul").children("li").length==0){
+		$("#subMenu2").addClass("undis");
+	}
+})
+</script><section class="tag issue clearfix">
+  <div class="titH1">
+    <h1><span>热门话题</span></h1>
+  </div>
+    <div class="item clearfix" style="border-top:none;">
+
+  
+
+  <h2><a href="/tipdm/tddt/20180925/1514.html" target="_blank" title="佛山科学技术学院领导一行参观考察泰迪科技">
+佛山科学技术学院领导一行参观考察泰迪科技</a></h2>
+    <div class="issue-comment">浏览  (316)</div>
+  </div>
+  <div class="item clearfix" style="">
+
+  
+
+  <h2><a href="/tipdm/tddt/20181029/1551.html" target="_blank" title="2018泰迪杯数据分析职业技能大赛工作启动会圆满结束">
+2018泰迪杯数据分析职业技能大赛工作启动会圆满结束</a></h2>
+    <div class="issue-comment">浏览  (234)</div>
+  </div>
+  <div class="item clearfix" style="">
+
+  
+
+  <h2><a href="/tipdm/tddt/20180925/1515.html" target="_blank" title="全国技工学校领导及教师莅临泰迪科技参观考察">
+全国技工学校领导及教师莅临泰迪科技参观考察</a></h2>
+    <div class="issue-comment">浏览  (133)</div>
+  </div>
+  <div class="item clearfix" style="">
+
+  
+
+  <h2><a href="/tipdm/tddt/20180730/1468.html" target="_blank" title="2018“泰迪杯”数据挖掘挑战赛颁奖会在贵州大学隆重举行">
+2018“泰迪杯”数据挖掘挑战赛颁奖会在贵州大学隆重举行</a></h2>
+    <div class="issue-comment">浏览  (445)</div>
+  </div>
+  <div class="item clearfix" style="">
+
+  
+
+  <h2><a href="/tipdm/tddt/20180629/1454.html" target="_blank" title="《TensorFlow实战培训班》在佛山科学技术学院举行">
+《TensorFlow实战培训班》在佛山科学技术学院举行</a></h2>
+    <div class="issue-comment">浏览  (286)</div>
+  </div>
+   </section>      <div id="lxwm" class="mt16">
+  <div class="titH1">
+    <h1><span>联系我们</span></h1>
+  </div>
+  <div class="ptb10">
+    <p>电话：(020)22205718</p>
+    <p>热线：40068-40020</p>
+    <p>地址：广州黄埔区开泰大道36号</p>
+    <p>邮编：510000</p>
+    <p>电邮：<a href="mailto:services@tipdm.com">services@tipdm.com</a></p>
+  </div>
+</div> </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="webInfo container clearfix">
+    <div class="webTxt fl">
+      <div class="comInfo">
+      <h1>广州泰迪智能科技有限公司</h1>
+		  Copyright © Guangzhou TipDM Intelligent Technology Co.,Ltd. <span id="year">2017</span><font>/</font> <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备14098620号-4</a>
+      &nbsp; &nbsp;</div>
+		<p class="slogan">专注于大数据挖掘技术研发及知识传播</p>
+    </div>
+    <div class="weixin fr"> <img src="/r/cms/tipdmcom/tipdmcom/tip/weixin.png" alt="官方公众号" width="120"> </div>
+  </div>
+</footer>
+<script type="text/javascript" language="javascript">
+	$(function(){
+		var myDate = new Date();
+		$("#year").text(myDate.getFullYear());
+	})
+	
+   //加入收藏
+       function AddFavorite(sURL, sTitle) {
+           sURL =encodeURI(sURL); 
+       try{   
+          window.external.addFavorite(sURL, sTitle);   
+       }catch(e) {   
+          try{   
+              window.sidebar.addPanel(sTitle, sURL, "");   
+           }catch (e){   
+              alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+          }   
+       }
+   }
+   
+   //设为首页
+   function SetHome(url){
+       if (document.all) {
+          document.body.style.behavior='url(#default#homepage)';
+             document.body.setHomePage(url);
+       }else{
+           alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+       }
+   }
+</script><div class="right-fixed">
+  <ul>
+    <!--
+    <li class="app">
+      <div class="app-logo"></div>
+    </li>
+    -->
+    <li class="weixin">
+      <div class="tBox weixin-logo">
+        <div class="tit"><font>扫描二维码</font><br>
+          关注官方公众号</div>
+        <img src="/r/cms/tipdmcom/tipdmcom/tip/weixin.png"> </div>
+    </li>
+    <li class="qq">
+      <div class="tBox qq-logo">
+        <div class="qqLink"> 
+			<a target="_blank" onclick="qqOpen(3514662177)" href="javascript:qqOpen(3514662177)" title="客服一">客服一</a> 
+        <a target="_blank" onclick="qqOpen(2459935724)" href="javascript:qqOpen(2459935724)" title="客服二">客服二</a> 
+        <a target="_blank" onclick="qqOpen(3526567870)" href="javascript:qqOpen(3526567870)" title="客服三">客服三</a> 
+        <a target="_blank" onclick="qqOpen(324020430)" href="javascript:qqOpen(324020430)" title="客服四">客服四</a> </div>
+      </div>
+    </li>
+    <li class="back-top"></li>
+  </ul>
+  <script type="text/javascript">
+	$(function(){
+		var $body = $(document.body);;
+		var $bottomTools = $('.right-fixed');
+			$(window).scroll(function () {
+				var scrollHeight = $(document).height();
+				var scrollTop = $(window).scrollTop();
+				scrollTop > 50 ? $(".back-top").slideDown(300).css("display","block") : $(".back-top").slideUp(300);			
+			});
+			$('.back-top').click(function (e) {
+				e.preventDefault();
+				$('html,body').animate({ scrollTop:0});
+			});
+			
+	});
+	  function qqOpen(qq){
+    var link = 'http://wpa.qq.com/msgrd?v=3&uin='+qq+'&site=qq&menu=yes';
+    window.open(link,'_blank');
+  }
+  
+  $('#cs_close').bind('click',function(){
+    $('#cs_box').hide();
+  });
+  </script> 
+</div>
+</body>
+</html>
