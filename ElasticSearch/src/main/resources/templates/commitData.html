@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ElasticSearch-CommitData</title>
+    <script src="js/jquery1.42.min.js"></script>
+    <link href="css/commit-search.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="examples">
+    <div class="parent">
+        <label for="hy" style="float: left">Please enter the table name: </label>
+        <button style="float: right" class="commitData">导入</button>
+        <input id="hy" class="tableName" placeholder="自动联想功能已开启"/>
+    </div>
+</div>
+<script src='js/horsey.js'></script>
+<script src="js/commit-search.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    $(".commitData").click(function () {
+        var tableName = $(".tableName").val();
+        $.ajax({
+            type: "post",
+            url: "/importAll",
+            dataType: "json",
+            data: {tableName: tableName},
+            success: function (data) {
+                console.log(data.response.toString());
+                alert(data.response.toString());
+            },
+            error: function (data) {
+                console.log(data.response.toString());
+                alert(data.response.toString());
+            }
+        })
+    })
+</script>

@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    username: 
+    password: 
+    url: jdbc:mysql://***/hsir_graduation_project?characterEncoding=utf-8&useSSl=false&allowPublicKeyRetrieval=true
+  application:
+    name: elastic
+  mvc:
+    static-path-pattern:
+      - classpath:/static/**
+  resources:
+    static-locations:
+      - classpath:/META-INF/resoures/
+      - classpath:/resoures/
+      - classpath:/static/
+      - classpath:/public/
+server:
+  port: 7779
