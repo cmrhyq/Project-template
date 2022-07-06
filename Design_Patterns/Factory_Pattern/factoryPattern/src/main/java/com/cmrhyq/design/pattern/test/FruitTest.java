@@ -18,8 +18,10 @@ public class FruitTest {
 
     public static void main(String[] args) {
         IFruit fruit = PlantFruitsFactory.plantFruit("Apple");
+        assert fruit != null;
         fruit.plant();
         fruit = PlantFruitsFactory.plantFruit("Orange");
+        assert fruit != null;
         fruit.plant();
     }
 }
