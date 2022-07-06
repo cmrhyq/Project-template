@@ -14,7 +14,7 @@ package com.cmrhyq.design.pattern.service;
 public interface IFruit {
 
     /**
-     *
+     * 种植水果的方法
      */
     void plant();
 }
