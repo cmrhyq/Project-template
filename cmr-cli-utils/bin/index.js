@@ -22,7 +22,7 @@ function downloadFn(answers, dirname) {
         spinner.stop(); // 关闭 loading 动效
         console.log(chalk.green('download template success'));
         // 重写 package 中的 name、description 等项目信息
-        const pkg = process.cwd() + /${dirname}/ package.json;
+        const pkg = process.cwd() + '/${dirname}/package.json';
         const content = JSON.parse(fs.readFileSync(pkg, 'utf8'));
         content.name = name;
         content.description = description;
