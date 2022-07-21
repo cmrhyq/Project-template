@@ -1,40 +1,34 @@
-import java.util.Date;
-import java.util.Scanner;
-
 public class Main {
+    //    public static void main(String[] args) {
+//        int totalLevel = 20;
+//        for (int i = 1; i <= totalLevel; i++) {
+//            for (int k = 1; k <= totalLevel - i; k++) {
+//                System.out.print(" ");
+//            }
+//            for (int j = 1; j <= 2 * i - 1; j++) {
+//                if (j == 1 || j == 2 * i - 1 || i == totalLevel) {
+//                    System.out.print("*");
+//                } else {
+//                    System.out.print(" ");
+//                }
+//            }
+//            System.out.println();
+//        }
+//    }
     public static void main(String[] args) {
-//        int z = 3 >> 2;
-//        System.out.println("z = " + z);
-
-        // ++a 是单目运算：单目运算是只对一个值进行运算
-        // 1级 (){}
-        // 2级 单目运算
-        // 3级 算术运算符
-        // 4级 位移运算符
-        // 5级 比较运算符
-        // 6级 逻辑运算符
-        // 7级 三元运算符
-        // 8级 赋值运算符
-
-//        int n1 = 0x23A;
-//        System.out.println("n1 = " + n1);
-
-//        int a = 1 >> 2; // 1向右位移2位
-//        int b = -1 >> 2;
-//        int c = 1 << 2;
-//        int d = -1 << 2;
-//        int e = 3 >>> 2;
-//        System.out.println("a=" + a);
-//        System.out.println("b=" + b);
-//        System.out.println("c=" + c);
-//        System.out.println("d=" + d);
-//        System.out.println("e=" + e);
-
-//        Scanner scanner = new Scanner(System.in);
-//        double score = scanner.nextDouble();
-//        char sex = scanner.next().charAt(0);
-//        System.out.println("score :" + score + ", sex :" + sex);
-
-
+        double total = 100000;
+        int bout = 0;
+        while (total > 0) {
+            if (total > 50000) {
+                total = total - total / 0.05;
+                bout++;
+            } else if (total <= 50000 && total > 1000) {
+                total = total - 1000;
+                bout++;
+            } else {
+                System.out.println("bout = " + bout);
+                break;
+            }
+        }
     }
 }
