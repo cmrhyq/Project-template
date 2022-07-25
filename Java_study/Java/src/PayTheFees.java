@@ -16,15 +16,16 @@ public class PayTheFees {
         int bout = 0;
         while (total > 0) {
             if (total > 50000) {
-                total = total - total * 0.05;
+                // total = total - total * 0.05;
+                total *= 0.95;
                 bout++;
-            } else if (total <= 50000 && total > 1000) {
+            } else if (total > 1000) {
                 total = total - 1000;
                 bout++;
             } else {
-                System.out.println("bout = " + bout);
                 break;
             }
         }
+        System.out.println("bout = " + bout);
     }
 }
