@@ -2,6 +2,67 @@
 
 [toc]
 
+## 等于
+
+### 例题
+
+**写一个查询语句，返回一个客户列表，列表中客户的推荐人的编号都 不是 2**
+
+给定表 customer ，里面保存了所有客户信息和他们的推荐人。
+
+| id   | name | referee_id|
+| ----------- | ------- | ------- |
+|    1 | Will |      NULL |
+|    2 | Jane |      NULL |
+|    3 | Alex |         2 |
+|    4 | Bill |      NULL |
+|    5 | Zack |         1 |
+|    6 | Mark |         2 |
+
+
+对于上面的示例数据，结果为：
+
+| name |
+| ----------- |
+| Will |
+| Jane |
+| Bill |
+| Zack |
+
+### 题解
+
+```sql
+# 错误解法
+select
+    name
+from customer
+where id !=2
+```
+
+- = 或 ！= 只能判断基本数据类型 
+
+```sql
+# 正确解法
+# 先查出推荐人编号为2的有哪些
+# 然后使用not in 去剔除这些数据
+select
+    name
+from customer
+where id not in (
+    select
+        id
+    from customer
+    where referee_id = 2
+)
+
+# 正确解法2
+# 使用ifNull对推荐人编号进行判断，为null则他的值为0
+select
+    name
+from customer
+where ifnull(referee_id,0)!=2;
+```
+
 ## union关键字
 
 ### union的用法
@@ -86,7 +147,7 @@ where
 
 ## not in和null
 
-### 例题
+### 例题1
 
 **写一个查询语句，输出所有节点的编号和节点的类型，并将结果按照节点编号排序。**
 
@@ -139,7 +200,7 @@ where
 
 如果树中只有一个节点，你只需要输出它的根属性。
 
-### 题解
+#### 题解
 
 ```sql
 # 错误答案
@@ -168,6 +229,77 @@ select id,
     end as Type
 from tree
 ```
+
+### 例题2
+
+某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。
+
+Customers 表：
+
+| Id | Name  |
+| ----------- | ------- |
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
+
+Orders 表：
+
+| Id | CustomerId |
+| ----------- | ------- |
+| 1  | 3          |
+| 2  | 1          |
+
+例如给定上述表格，你的查询应返回：
+
+| Customers |
+| ----------- |
+| Henry     |
+| Max       |
+
+#### 题解
+
+```sql
+# 第一种使用not in
+select
+    c.Name as Customers
+from Customers as c
+where id not in (
+    select CustomerId
+    from Orders
+)
+
+# 第二种使用not exists
+select 
+	c.Name as Customers
+from Customers c
+where not exists(
+    select 
+    	1 
+    from Orders as o 
+    where o.CustomerId=c.Id
+)
+
+# 第三种使用左连接
+select 
+	c.Name as Customers
+from Customers c
+left join Orders as o
+on c.Id=o.CustomerId
+where o.Id is null
+```
+
+**`not exists` 是`exists`的对立面，所以要了解`not exists`的用法，我们首先了解下`exists`、`in`的区别和特点**
+
+- `exists`：强调的是是否返回结果集，不要知道返回什么
+
+  - ```sql
+    select name from student where sex = 'm' and mark exists(select 1 from grade where ...)
+    ```
+  
+  - 只要`exists`引导的子句有结果集返回，那么`exists`这个条件就算成立，如果改成`select 2`，这个数字就没有意义。所以`exists`子句不在乎返回什么，而是在乎是不是有结果集返回
+  
+- 
 
 ## 查出第二高的薪水
 
