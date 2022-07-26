@@ -147,7 +147,7 @@ where
 
 ## not in和null
 
-### 例题1
+### 例题
 
 **写一个查询语句，输出所有节点的编号和节点的类型，并将结果按照节点编号排序。**
 
@@ -230,7 +230,9 @@ select id,
 from tree
 ```
 
-### 例题2
+## exists
+
+### 例题
 
 某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。
 
@@ -299,7 +301,40 @@ where o.Id is null
   
   - 只要`exists`引导的子句有结果集返回，那么`exists`这个条件就算成立，如果改成`select 2`，这个数字就没有意义。所以`exists`子句不在乎返回什么，而是在乎是不是有结果集返回
   
-- 
+- 而` exists` 与` in` 最大的区别在于 in引导的子句只能返回一个字段
+
+  - ```sql
+    select name from student where sex = 'm' and mark in (select 1,2,3 from grade where ...)
+    ```
+  
+  - `in`子句返回了三个字段，这就是错误的，`exists`是允许的，但是in只允许有一个字段返回
+
+- 而`not exists`和`not in`分别是`exists`和`in`的对立面
+
+  - `exists (sql  返回结果集，为真)`
+    - 主要看`exists`括号中的`sql`语句结果是否有结果，有结果：才会继续执行`where`条件；没结果：视为`where`条件不成立。
+
+  - `not exists (sql  不返回结果集，为真)`
+    - 主要看`not exists`括号中的`sql`语句是否有结果，无结果：才会继续执行`where`条件；有结果：视为`where`条件不成立。
+
+- `not exists`：经过测试，当子查询和主查询有关联条件时，相当于从主查询中去掉子查询的数据。
+
+###  `exists`和`in`的效率问题
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 查出第二高的薪水
 
