@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 /**
  * <p></p>
  *
@@ -15,17 +13,29 @@ public class Letter {
 
     /**
      * 输出小写的a-z和大写的Z-A
+     *
      * @param args
      */
     public static void main(String[] args) {
-        int[] lowerLetter = {97,122};
-        int[] capitalLetter = {90,65};
+        int[] lowerLetter = {97, 122};
+        int[] capitalLetter = {90, 65};
         for (int i = lowerLetter[0]; i <= lowerLetter[1]; i++) {
             System.out.print((char) i + " ");
         }
         System.out.println();
         for (int j = capitalLetter[0]; j >= capitalLetter[1]; j--) {
             System.out.print((char) j + " ");
+        }
+    }
+
+    public static void letter() {
+        char[] lowerLetter = {'a', 'z'};
+        char[] capitalLetter = {'A', 'Z'};
+        for (char i = lowerLetter[0]; i <= lowerLetter[1]; i++) {
+            System.out.print(i + "\t");
+        }
+        for (char i = lowerLetter[1]; i >= lowerLetter[0]; i--) {
+            System.out.print(i + "\t");
         }
     }
 }

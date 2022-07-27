@@ -22,7 +22,7 @@ public class Five {
         for (int i = 1; i <= max; i++) {
             if (i % num != 0) {
                 row++;
-                System.out.print(i + " ");
+                System.out.print(i + "\t");
                 if (row % 5 == 0){
                     System.out.println();
                 }
