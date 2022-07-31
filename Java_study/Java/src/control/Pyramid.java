@@ -1,10 +1,12 @@
+package control;
+
 /**
  * <p></p>
  *
  * @author Alan Huang
  * @version v0.0.1
  * @project Java
- * @docRoot PACKAGE_NAME.Pyramid
+ * @docRoot PACKAGE_NAME.control.Pyramid
  * @date 2022/7/21-23:34
  * @email cmrhyq@163.com
  * @since v0.0.1

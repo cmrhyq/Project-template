@@ -1,10 +1,12 @@
+package control;
+
 /**
  * <p></p>
  *
  * @author Alan Huang
  * @version v0.0.1
  * @project Java
- * @docRoot PACKAGE_NAME.Five
+ * @docRoot PACKAGE_NAME.control.Five
  * @date 2022/7/24-1:23
  * @email cmrhyq@163.com
  * @since v0.0.1
