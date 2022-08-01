@@ -1,4 +1,4 @@
-package control;
+package cn.base.control;
 
 /**
  * <p></p>
@@ -6,7 +6,7 @@ package control;
  * @author Alan Huang
  * @version v0.0.1
  * @project Java
- * @docRoot PACKAGE_NAME.control.Sum1
+ * @docRoot PACKAGE_NAME.java.base.control.Sum1
  * @date 2022/7/24-1:48
  * @email cmrhyq@163.com
  * @since v0.0.1

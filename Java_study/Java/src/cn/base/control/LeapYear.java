@@ -1,4 +1,4 @@
-package control;
+package cn.base.control;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Alan Huang
  * @version v0.0.1
  * @project Java
- * @docRoot PACKAGE_NAME.control.LeapYear
+ * @docRoot PACKAGE_NAME.java.base.control.LeapYear
  * @date 2022/7/22-0:59
  * @email cmrhyq@163.com
  * @since v0.0.1

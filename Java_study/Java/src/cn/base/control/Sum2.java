@@ -1,4 +1,4 @@
-package control;
+package cn.base.control;
 
 /**
  * <p></p>

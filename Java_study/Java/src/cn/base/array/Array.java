@@ -1,4 +1,4 @@
-package array;
+package cn.base.array;
 
 /**
  * <p></p>
@@ -6,7 +6,7 @@ package array;
  * @author Alan Huang
  * @version v0.0.1
  * @project Java
- * @docRoot array.array
+ * @docRoot java.base.array.java.base.array
  * @date 2022/7/31-20:22
  * @email cmrhyq@163.com
  * @since v0.0.1
