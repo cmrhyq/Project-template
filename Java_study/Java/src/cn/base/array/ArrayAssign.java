@@ -17,6 +17,9 @@ public class ArrayAssign {
         arrayCopy();
     }
 
+    /**
+     * 数组分配机制
+     */
     public static void arrayAssign(){
         // 基本数据类型复制，复制方向为值拷贝
         // n2的变化不会影响n1的值
@@ -26,7 +29,7 @@ public class ArrayAssign {
         System.out.println("n1 = " + n1);
         System.out.println("n2 = " + n2);
         // 数组默认情况使用的是引用传递，赋的值是地址，赋值方式为引用传递
-        //
+        // 所以arr2的赋值会影响arr1的值
         int[] arr1 = {1,2,3};
         int[] arr2 = arr1;
         arr2[0] = 9;
