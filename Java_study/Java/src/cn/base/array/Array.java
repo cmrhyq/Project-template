@@ -44,7 +44,7 @@ public class Array {
                 subscript = i;
             }
         }
-        System.out.println("max value is:" + array[subscript]);
+        System.out.println("max value is:" + array[subscript] + ",max subscript is:" + subscript);
     }
 
 
