@@ -17,11 +17,21 @@ public class Array {
      * @param args
      */
     public static void main(String[] args) {
-        double sum = 0;
-        double[] pasture = {3, 5, 1, 3.4, 2, 50};
-        for (double v : pasture) {
-            sum += v;
+        int[] array = {4, -1, 9, 10, 23};
+        arrayMaxNumber(array);
+    }
+
+    /**
+     * 求数组中的最大值
+     * @param array 数组
+     */
+    public static void arrayMaxNumber(int[] array) {
+        int subscript = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[subscript] < array[i]) {
+                subscript = i;
+            }
         }
-        System.out.println(sum / pasture.length);
+        System.out.println("max value is:" + array[subscript]);
     }
 }
