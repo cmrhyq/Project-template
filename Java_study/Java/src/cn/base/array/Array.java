@@ -19,10 +19,22 @@ public class Array {
     public static void main(String[] args) {
         int[] array = {4, -1, 9, 10, 23};
         arrayMaxNumber(array);
+        printAtoZ();
+    }
+
+    /**
+     * 输出大写的A-Z
+     */
+    public static void printAtoZ() {
+        int[] capitalLetter = {65, 90};
+        for (int i = capitalLetter[0]; i <= capitalLetter[1]; i++) {
+            System.out.print((char) i + " ");
+        }
     }
 
     /**
      * 求数组中的最大值
+     *
      * @param array 数组
      */
     public static void arrayMaxNumber(int[] array) {
@@ -34,4 +46,6 @@ public class Array {
         }
         System.out.println("max value is:" + array[subscript]);
     }
+
+
 }
