@@ -1,7 +1,7 @@
 package cn.base.array;
 
 /**
- * <p></p>
+ * <h1 style="color:white">数组相关学习</h1>
  *
  * @author Alan Huang
  * @version v0.0.1
@@ -14,15 +14,15 @@ package cn.base.array;
 public class ArrayAssign {
 
     public static void main(String[] args) {
-        int[] array = {66, 55, 44, 33, 22, 11};
-        int[] list = arrayReverse(array);
+        int[] array = {66, 55, 44, 33, 22, 11, 99};
+        int[] list = arrayReverse1(array);
         for (int i = 0; i < list.length; i++) {
             System.out.println("list = " + list[i]);
         }
     }
 
     /**
-     * 数组分配机制
+     * <h2 style="color:white">数组分配机制</h2>
      */
     public static void arrayAssign() {
         // 基本数据类型复制，复制方向为值拷贝
@@ -42,7 +42,7 @@ public class ArrayAssign {
     }
 
     /**
-     * 复制数组1的值到数组2
+     * <h2 style="color:white">复制数组1的值到数组2</h2>
      */
     public static void arrayCopy() {
         int[] arr1 = {10, 20, 30};
@@ -56,8 +56,12 @@ public class ArrayAssign {
     }
 
     /**
-     * 数组反转
-     *
+     * <h2 style="color:white">数组反转 - 方法1</h2>
+     * <p>使用一个新的数组reverse[]来接收数组反转的值</p>
+     * <div style="margin: 0 0 0 15px">
+     *     <p>reverse[] 从0 - array.length 正序接收 array[] 的值</p>
+     *     <p>array[] 倒着将值赋给 reverse[]，而倒着赋值时 array[] 的下标为 (array.length - 1) - i</p>
+     * </div>
      * @param array array
      * @return int[]
      */
@@ -67,5 +71,34 @@ public class ArrayAssign {
             reverse[i] = array[(array.length - 1) - i];
         }
         return reverse;
+    }
+
+    /**
+     * <h2 style="color:white">数组反转 - 方法2</h2>
+     * <p>假定 n为数组长度，i为交换次数，则可以推导</p>
+     * <div style="margin: 0 0 0 15px">
+     *     <p>第一次，把 array[i-1] 和 array[n-i] 进行交换</p>
+     *     <p>第二次，把 array[i-2] 和 array[n-i] 进行交换</p>
+     *     <p>第三次，把 array[i-3] 和 array[n-i] 进行交换</p>
+     *     <p>第四次 ...... 以此类推</p>
+     * </div>
+     * <p>可得出</p>
+     * <div style="margin: 0 0 0 15px">
+     *     <p>一共要交换 n/2 次</p>
+     *     <p>每次交换时，在for循环中对应的下标是 array[i] 和 array[array.length - 1 -i]</p>
+     * </div>
+     *
+     * @param array array
+     * @return int[]
+     */
+    public static int[] arrayReverse1(int[] array) {
+        int temp = 0;
+        int len = array.length;
+        for (int i = 0; i < len / 2; i++) {
+            temp = array[len - 1 - i];
+            array[len - 1 - i] = array[i];
+            array[i] = temp;
+        }
+        return array;
     }
 }
