@@ -1,5 +1,13 @@
 webInterface:
+  url: "http://10.1.208.228:9991/aicas/login?service=http%3A%2F%2F10.1.208.228%3A9991%2Facam%2F#/iframe/25020033"
   chrome:
-    path: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    path: "driver\\chromedriver.exe"
   edge:
     path: "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+safety:
+  account: admin
+  password: 123456%Yaxin
+log:
+  level: INFO
+  filename: 'log/log.txt'
+  format: '%(asctime)s - %(filename)s - [line:%(lineno)d] - [%(levelname)s]: %(message)s'
