@@ -1,8 +1,7 @@
-import logging
 import time
-
+import logging
+from config.log import log_out
 from selenium import webdriver
-from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from config.read_yaml import read_yaml_content
 from selenium.webdriver.chrome.service import Service
@@ -11,19 +10,17 @@ from selenium.webdriver.common.action_chains import ActionChains
 config = read_yaml_content()
 path = Service(config['webInterface']['chrome']['path'])
 browser = webdriver.Chrome(service=path)
-logging.basicConfig(level=config['log']['level'],
-                    filename=config['log']['filename'],
-                    filemode='w',
-                    format=config['log']['format'])
 
 
 def login():
     try:
         browser.get(config['webInterface']['url'])
-        logging.info('login url is:' + config['webInterface']['url'])
+        # logging.info('login url is:' + config['webInterface']['url'])
+        print(log_out(), 'login url is:' + config['webInterface']['url'])
         account_elem = browser.find_element(By.ID, 'username')
         account_elem.send_keys(config['safety']['account'])
-        logging.info('input account:' + config['safety']['account'])
+        # logging.info('input account:' + config['safety']['account'])
+        print(log_out(), 'input account:' + config['safety']['account'])
         pwd_elem = browser.find_element(By.ID, 'password')
         pwd_elem.send_keys(config['safety']['password'])
         browser.find_element(By.ID, 'loginButton').click()

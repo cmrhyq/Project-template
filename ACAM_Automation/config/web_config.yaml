@@ -9,5 +9,5 @@ safety:
   password: 123456%Yaxin
 log:
   level: INFO
-  filename: 'log/log.txt'
+  filePath: '..\log\'
   format: '%(asctime)s - %(filename)s - [line:%(lineno)d] - [%(levelname)s]: %(message)s'
