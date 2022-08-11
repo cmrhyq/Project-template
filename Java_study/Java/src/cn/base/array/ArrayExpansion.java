@@ -17,18 +17,18 @@ public class ArrayExpansion {
 
     public static void main(String[] args) {
 //        新数组扩容
-//        int[] array = {1, 2, 3};
-//        Scanner scanner = new Scanner(System.in);
-//        array = arrayExpansion(array);
-//        while (true) {
-//            System.out.println();
-//            System.out.println("Please choose whether to continue(y/n):");
-//            if ("y".equals(scanner.next().toLowerCase())) {
-//                array = arrayExpansion(array);
-//            } else {
-//                break;
-//            }
-//        }
+        int[] array = {1, 2, 3};
+        Scanner scanner = new Scanner(System.in);
+        array = arrayExpansion(array);
+        while (true) {
+            System.out.println();
+            System.out.println("Please choose whether to continue(y/n):");
+            if ("y".equals(scanner.next().toLowerCase())) {
+                array = arrayExpansion(array);
+            } else {
+                break;
+            }
+        }
     }
 
     /**
