@@ -1,5 +1,5 @@
 webInterface:
-  url: "http://10.1.208.228:9991/aicas/login?service=http%3A%2F%2F10.1.208.228%3A9991%2Facam%2F#/iframe/25020033"
+  url: "*"
   chrome:
     path: "driver\\chromedriver.exe"
   edge:
